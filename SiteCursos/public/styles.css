@@ -1,0 +1,86 @@
+/* Fonte personalizada do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Fonte elegante e moderna */
+    background: linear-gradient(135deg, #0A0F3B, #1B2A49); /* Fundo com gradiente suave */
+    color: #EAF0F1; /* Texto claro para contraste */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: transparent; /* Fundo transparente para mesclar com o gradiente */
+    color: #34D1BF; /* Verde-água para combinar com o logo */
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha de destaque sutil */
+}
+
+header img {
+    width: 80px;
+    vertical-align: middle;
+    margin-bottom: -10px;
+}
+
+main {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    color: #34D1BF;
+    margin-bottom: 20px;
+}
+
+#course-list {
+    list-style-type: none;
+    padding: 0;
+    width: 80%;
+    max-width: 600px;
+}
+
+.course-item {
+    background: rgba(22, 36, 71, 0.9); /* Fundo semi-transparente para efeito de profundidade */
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+    color: #EAF0F1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-item:hover {
+    transform: translateY(-5px); /* Efeito de flutuação */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Sombra aumentada no hover */
+}
+
+.course-description {
+    margin: 10px 0;
+    color: #A8DADC; /* Tom claro para a descrição */
+}
+
+button {
+    background-color: #34D1BF;
+    color: #0A0F3B;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #28a89e; /* Cor de hover para o botão */
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+button.completed {
+    background-color: #888;
+    cursor: not-allowed;
+}
