@@ -3,14 +3,14 @@ const path = require('path');
 const mysql = require('mysql2');
 
 const app = express();
-const PORT = 3000;
+const PORT = 2080;
 const HOST = 'localhost';
 
 // Configuração da conexão com o banco de dados MySQL
 const db = mysql.createConnection({
     host: 'localhost', 
     user: 'root', 
-    password: '1234', 
+    password: 'cimatec', 
     database: 'techno_wave'
 });
 
@@ -42,7 +42,7 @@ app.get('/login', (req, res) => {
 });
 
 // Rota para cadastro de usuário
-app.post('/api/signup', (req, res) => {
+app.post('/signup', (req, res) => {
     const { name, email, password } = req.body;
     const query = 'INSERT INTO users (name, email, password) VALUES (?, ?, ?)';
 
@@ -57,7 +57,7 @@ app.post('/api/signup', (req, res) => {
 });
 
 // Rota para login de usuário
-app.post('/api/login', (req, res) => {
+app.post('/login', (req, res) => {
     const { email, password } = req.body;
     const query = 'SELECT * FROM users WHERE email = ? AND password = ?';
 
